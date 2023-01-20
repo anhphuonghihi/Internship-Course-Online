@@ -4,11 +4,14 @@
   box-sizing: border-box;
 }
 .App {
-  overflow-y: auto;
-  -ms-overflow-style: none;
+  -ms-overflow-style: hidden;
   scrollbar-width: none;
-  height: 2000px;
 }
 .App::-webkit-scrollbar {
   display: none;
+}
+.navbar{
+  position: sticky;
+  top: 0;
+  z-index: 2;
 }
