@@ -1,8 +1,16 @@
 const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
-const individualTraineeSchema = new Schema(
+const instructorSchema = new Schema(
   {
+    firstname: {
+      type: String,
+      required: true,
+    },
+    lastname: {
+      type: String,
+      required: false,
+    },
     username: {
       type: String,
       required: true,
@@ -16,19 +24,6 @@ const individualTraineeSchema = new Schema(
       type: String,
       required: true,
     },
-    firstname: {
-      type: String,
-      required: true,
-    },
-    lastname: {
-      type: String,
-      required: true,
-    },
-    state:{
-      type: Boolean,
-      default: false,
-      required : true
-    },
     gender: {
       type: String,
       required: false,
@@ -37,8 +32,7 @@ const individualTraineeSchema = new Schema(
   { timestamps: true }
 );
 
-const IndividualTrainee = mongoose.model(
-  "IndividualTrainee",
-  individualTraineeSchema
-);
-module.exports = IndividualTrainee;
+
+
+const Instructor = mongoose.model("Instructor", instructorSchema);
+module.exports = Instructor;
