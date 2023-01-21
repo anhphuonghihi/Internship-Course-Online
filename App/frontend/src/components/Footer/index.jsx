@@ -1,7 +1,6 @@
 import React from "react";
 import logo from "../../static/logo.png";
 import styles from "./Footer.module.scss";
-import { Link } from "react-router-dom";
 function Footer() {
   return (
     <div className={styles["footer"]}>
@@ -23,7 +22,7 @@ function Footer() {
 
       <hr></hr>
       <div class={styles["footer-bottom"]}>
-        <p>Bản quyền &copy;2022 PhuongHoLe </p>
+        <p>Bản quyền &copy;2023 PhuongHoLe </p>
       </div>
     </div>
   );

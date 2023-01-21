@@ -4,9 +4,10 @@ import { Link } from "react-router-dom";
 import Footer from "../../components/Footer";
 import Thumbnail from "../../components/Thumbnail";
 import ThunbailLog from "../../components/ThunbailLog";
+import Explore from "../../components/Explore";
 const cookies = new Cookies();
 const Home = () => {
-  const status = 1
+  const status = cookies.get("status");
   if (status) {
     if (status === 0 || status === 2) {
       return (
@@ -21,6 +22,7 @@ const Home = () => {
               </Link>
             </div>
           </nav>
+          <Explore />
           <ThunbailLog />
           <Footer />
         </div>
@@ -41,6 +43,7 @@ const Home = () => {
               </Link>
             </div>
           </nav>
+          <Explore />
           <ThunbailLog />
           <Footer />
         </div>

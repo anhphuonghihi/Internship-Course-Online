@@ -2,6 +2,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { useState } from "react";
 import Navbar from "./components/Navbar";
 import Home from "./pages/Home";
+import Login from "./pages/Login";
 function App() {
   const [showNav, setShowNav] = useState(true);
   const ROLES = {
@@ -21,6 +22,7 @@ function App() {
         <div className="pages">
           <Routes>
             <Route index element={<Home />}></Route>
+            <Route path="/login" element={<Login />} />
           </Routes>
         </div>
       </BrowserRouter>

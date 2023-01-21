@@ -10,8 +10,19 @@
 .App::-webkit-scrollbar {
   display: none;
 }
-.navbar{
+.navbar {
   position: sticky;
   top: 0;
   z-index: 2;
+}
+
+@import url("./model.css");
+
+.btn-secondary {
+  background-color: #6c757d;
+}
+.btn {
+  border: none;
+  font-size: 18px;
+  background: none;
 }
