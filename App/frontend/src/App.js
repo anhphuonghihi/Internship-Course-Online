@@ -3,6 +3,8 @@ import { useState } from "react";
 import Navbar from "./components/Navbar";
 import Home from "./pages/Home";
 import Login from "./pages/Login";
+import Register from "./pages/Register";
+import UserTerms from "./pages/UserTerms";
 function App() {
   const [showNav, setShowNav] = useState(true);
   const ROLES = {
@@ -21,8 +23,11 @@ function App() {
         )}
         <div className="pages">
           <Routes>
+            {/* public */}
             <Route index element={<Home />}></Route>
             <Route path="/login" element={<Login />} />
+            <Route path="/register" element={<Register />} />
+            <Route path="/user/terms" element={<UserTerms />} />
           </Routes>
         </div>
       </BrowserRouter>

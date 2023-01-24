@@ -18,6 +18,7 @@ const LOGOUT_URL = "/admin/logout";
 const cookies = new Cookies();
 const Navbar = () => {
   const role = cookies.get("status");
+  console.log(role);
   const username = localStorage.getItem("username")
     ? localStorage.getItem("username")
     : ["o"];
@@ -171,8 +172,7 @@ const Navbar = () => {
                   <MenuItem onClick={handleBalance}>Số dư</MenuItem>
                   <MenuItem onClick={handlePrevReports}>Báo cáo</MenuItem>
                   <MenuItem onClick={handlereviews}>
-                    {" "}
-                    Đánh giá của tôi{" "}
+                    Đánh giá của tôi
                   </MenuItem>
                 </>
               )}

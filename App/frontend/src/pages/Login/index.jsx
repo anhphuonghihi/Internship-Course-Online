@@ -5,6 +5,7 @@ import Cookies from "universal-cookie";
 import Button from "react-bootstrap/Button";
 import Modal from "react-bootstrap/Modal";
 import axios from "axios";
+import clearAuth from "../../clearAuth";
 import Swal from "sweetalert2";
 const LOGIN_URL = "/admin/login";
 const cookies = new Cookies();
@@ -23,7 +24,7 @@ const Login = () => {
     setErrMsg("");
   }, [username, password]);
   useEffect(() => {
-    // clearAuth();
+    clearAuth();
   }, []);
   const handleSumbit = async (event) => {
     event.preventDefault();

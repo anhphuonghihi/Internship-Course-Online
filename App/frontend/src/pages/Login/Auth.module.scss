@@ -2,7 +2,9 @@
   display: flex;
   justify-content: center;
   width: 100vw;
-  height: 50vh;
+  height: 88vh;
+  background-size: cover;
+  background-image: url("../../static/banner.jpg");
 }
 
 .Auth-form {
@@ -10,6 +12,7 @@
   box-shadow: rgb(0 0 0 / 16%) 1px 1px 10px;
   padding: 20px;
   border-radius: 8px;
+  height: 55vh;
   background-color: white;
   margin-top: 20px;
 }
@@ -37,7 +40,7 @@
   font-size: 14px;
   font-weight: 600;
   color: rgb(34, 34, 34);
-  flex: 1;
+  flex: 2;
 }
 .footForm {
   display: flex;
@@ -115,4 +118,17 @@
   background-color: #0d6efd;
   border-radius: 50px;
   padding: 10px 25px;
+}
+.hide {
+  display: none;
+}
+
+.valid {
+  color: limegreen;
+  margin-left: 0.25rem;
+}
+
+.invalid {
+  color: red;
+  margin-left: 0.25rem;
 }

@@ -1,13 +1,10 @@
-const router = require('express').Router()
+const router = require("express").Router();
 
+const {
+  forgetPassword,
+  verifyCode,
+} = require("../controllers/IndividualTraineeController");
+router.post("/forgotpassword", forgetPassword);
+router.post("/verifyCode", verifyCode);
 
-router.get('/' , (req , res)=>{
-    // router code here
-})
-
-
-router.get('/another-route' , (req , res)=>{
-    // router code here
-})
-
-module.exports  = router
+module.exports = router;

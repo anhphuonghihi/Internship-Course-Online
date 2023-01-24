@@ -21,7 +21,7 @@ function Footer() {
       </div>
 
       <hr></hr>
-      <div class={styles["footer-bottom"]}>
+      <div className={styles["footer-bottom"]}>
         <p>Bản quyền &copy;2023 PhuongHoLe </p>
       </div>
     </div>

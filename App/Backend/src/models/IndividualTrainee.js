@@ -24,15 +24,55 @@ const individualTraineeSchema = new Schema(
       type: String,
       required: true,
     },
+    gender: {
+      type: String,
+      required: false,
+    },
     state:{
       type: Boolean,
       default: false,
       required : true
     },
-    gender: {
+    registered_courses: [
+      {
+        courseId: {
+          type: Schema.ObjectId,
+          ref: "Course",
+          required: true,
+        },
+        progress: {
+          type: Number,
+          min: 0,
+          max: 100,
+          default: 0,
+        },
+        courseRating :{type:mongoose.Schema.Types.ObjectId,ref:"Rating"},
+        instRating:{type:mongoose.Schema.Types.ObjectId,ref:"Rating"},
+        purchasedPrice : {type:Number,required:true},
+      },
+    ],
+    verficationCode :{
+      type:String,
+      min:10000,
+      max:99999
+    },
+    mini_bio: {
       type: String,
       required: false,
+      default: "",
     },
+    imgUrl: {
+      type: String,
+    },
+    creditCard : [{
+      type : mongoose.SchemaTypes.ObjectId,
+      ref : 'creditCard'
+    }],
+    wallet :{
+      type:Number,
+      default:0
+    } 
+      
   },
   { timestamps: true }
 );

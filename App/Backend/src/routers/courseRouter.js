@@ -1,13 +1,23 @@
-const router = require('express').Router()
+const router = require("express").Router();
 
+const {
+  addCoursePromotion,
+  getCourses,
+  courseSearch,
+  getCourseById,
+  getLink,
+  rateCourse,
+  popularCourses,
+  addCoursePromotionMulti,
+} = require("../controllers/CourseController");
 
-router.get('/' , (req , res)=>{
-    // router code here
-})
+router.get("/listCourses/details", getCourses);
+router.get("/:id", getCourseById);
+router.get("/most/popular", popularCourses);
+router.get("/listCourses/search", courseSearch);
+router.patch("/addPromotion", addCoursePromotion);
+router.get("/link/view", getLink);
+router.post("/setRating", rateCourse);
+router.patch("/addPromotionMulti", addCoursePromotionMulti);
 
-
-router.get('/another-route' , (req , res)=>{
-    // router code here
-})
-
-module.exports  = router
+module.exports = router;
